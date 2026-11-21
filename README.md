@@ -3,274 +3,283 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b1726">
 <title>WORLD EVENTS | رویدادهای جهان</title>
 
 <style>
 :root{
  --navy:#0b1726;
- --navy2:#12253b;
- --blue:#167dce;
- --light:#f3f7fc;
+ --navy2:#142b45;
+ --blue:#1686df;
+ --pale:#eaf3fc;
  --white:#fff;
- --text:#172b43;
- --muted:#718198;
+ --text:#172b42;
+ --muted:#78899c;
 }
 *{box-sizing:border-box}
 body{
- margin:0;
+ margin:0;background:#f3f6fa;color:var(--text);
  font-family:Tahoma,Arial,sans-serif;
- background:var(--light);
- color:var(--text);
 }
 a{text-decoration:none;color:inherit}
-button,input{font-family:inherit}
-.container{width:min(1150px,94%);margin:auto}
+button,input{font:inherit}
+.container{width:min(1160px,94%);margin:auto}
 
-/* HEADER */
+/* TOP HEADER */
+.topbar{
+ background:#071321;color:#b9cbe0;
+ font-size:11px;padding:9px 0;
+}
+.topbar .container{
+ display:flex;justify-content:space-between;gap:10px;
+}
+.topbar a:hover{color:white}
+
 header{
- background:linear-gradient(120deg,#091522,#142d49);
- color:white;
- padding:17px 0;
+ background:linear-gradient(110deg,#0b1726,#173a5b);
+ color:white;padding:19px 0;
 }
-.header-content{
- display:flex;align-items:center;
- justify-content:space-between;gap:15px;
+.header{
+ display:flex;align-items:center;justify-content:space-between;
+ gap:15px;
 }
-.brand{display:flex;align-items:center;gap:11px}
+.brand{display:flex;align-items:center;gap:13px}
 .logo{
- width:48px;height:48px;border-radius:14px;
+ width:54px;height:54px;border-radius:15px;
+ background:linear-gradient(145deg,#168fe8,#07508e);
  display:grid;place-items:center;
- background:linear-gradient(145deg,#168de8,#07549a);
- font-size:23px;font-weight:bold;
- box-shadow:0 5px 20px #0878c855;
+ font-size:29px;
+ box-shadow:0 5px 20px #1686df40;
 }
-.brand h1{font-size:19px;margin:0;letter-spacing:1px}
-.brand p{font-size:11px;color:#a9c6e5;margin:6px 0 0}
-.header-links{display:flex;gap:17px;font-size:12px;color:#d6e7fa}
-.header-links a:hover{color:#52b2ff}
+.brand h1{font-size:21px;letter-spacing:1px;margin:0}
+.brand p{font-size:11px;color:#b8d0e9;margin:7px 0 0}
+.header-actions{display:flex;gap:9px}
+.header-actions a{
+ border:1px solid #66809c66;border-radius:8px;
+ padding:10px 13px;font-size:11px;
+}
+.header-actions a:hover{background:#ffffff18}
 
-/* NAVIGATION */
-nav{
- background:#10233a;color:white;
- border-top:1px solid #ffffff12;
-}
-.nav-content{
- display:flex;align-items:center;gap:24px;
+/* NAV */
+nav{background:#10243a;color:#fff}
+.nav{
+ display:flex;align-items:center;gap:25px;
  overflow-x:auto;white-space:nowrap;
- padding:13px 0;font-size:12px;
 }
-.nav-content a:hover{color:#53b4ff}
-.menu-button{
- display:none;background:none;color:white;
- border:1px solid #49617b;padding:8px 12px;
- border-radius:8px;font-size:19px;
+.nav a{
+ font-size:12px;padding:15px 0;
+ border-bottom:2px solid transparent;
+}
+.nav a:hover{color:#62baff;border-color:#1686df}
+.menu-btn{
+ display:none;background:transparent;color:white;
+ border:1px solid #71869b;border-radius:8px;
+ padding:8px 12px;font-size:19px;
 }
 
 /* BREAKING */
 .breaking{
  margin:20px auto 0;
- background:#fff;border:1px solid #e1e9f2;
- border-radius:12px;overflow:hidden;
  display:flex;align-items:center;
- box-shadow:0 4px 15px #173b5b0a;
+ background:white;border:1px solid #e3eaf1;
+ border-radius:10px;overflow:hidden;
 }
 .breaking-label{
- background:#147dce;color:white;
- padding:15px;font-size:12px;font-weight:bold;
- white-space:nowrap;
+ background:#087acb;color:white;
+ padding:14px 17px;font-size:12px;
+ font-weight:bold;white-space:nowrap;
 }
-.breaking-text{
- padding:12px 15px;font-size:12px;
- color:#344a62;
+.breaking-content{
+ padding:12px 16px;font-size:12px;color:#42566b;
+ overflow:hidden;white-space:nowrap;
+}
+
+/* SEARCH */
+.search{
+ margin:17px 0;
+ display:flex;gap:10px;
+}
+.search input{
+ flex:1;min-width:0;
+ background:white;border:1px solid #dce5ef;
+ border-radius:9px;padding:14px 16px;
+ font-size:12px;outline:none;
+}
+.search input:focus{border-color:var(--blue)}
+.search button{
+ border:0;background:var(--blue);color:white;
+ border-radius:9px;padding:0 18px;cursor:pointer;
 }
 
 /* HERO */
 .hero{
- margin-top:22px;
- display:grid;
- grid-template-columns:1.5fr 1fr;
- gap:17px;
+ display:grid;grid-template-columns:1.7fr 1fr;
+ gap:16px;margin-top:18px;
 }
 .hero-main{
- min-height:300px;
- border-radius:17px;overflow:hidden;
- position:relative;
+ min-height:350px;position:relative;
+ overflow:hidden;border-radius:15px;
  background:
- linear-gradient(0deg,#061322eF,transparent 90%),
- linear-gradient(135deg,#155d92,#10243b 65%,#071522);
- color:white;
- display:flex;align-items:end;
- padding:25px;
+ linear-gradient(0deg,#071321f5 0%,#07132135 85%),
+ url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200") center/cover;
+ display:flex;align-items:end;color:white;
 }
-.hero-main:before{
- content:"🌍";position:absolute;
- font-size:125px;opacity:.12;
- top:25px;left:30px;
-}
-.hero-main h2{font-size:24px;line-height:1.8;margin:10px 0}
-.hero-main p{font-size:12px;color:#c9dced;line-height:2}
+.hero-content{padding:28px;position:relative;z-index:1}
 .tag{
- display:inline-block;
- background:#1686db;color:white;
- padding:6px 11px;border-radius:6px;
- font-size:10px;
+ display:inline-block;background:#1686df;
+ color:white;padding:7px 12px;
+ border-radius:5px;font-size:10px;
 }
-.hero-side{display:grid;gap:14px}
-.hero-small{
- border-radius:15px;padding:20px;
- color:white;display:flex;flex-direction:column;
- justify-content:end;min-height:140px;
- background:linear-gradient(130deg,#174c78,#0d1c30);
+.hero h2{font-size:25px;line-height:1.9;margin:15px 0 8px}
+.hero p{font-size:12px;color:#d1deeb;line-height:2}
+.read{
+ display:inline-block;margin-top:8px;
+ background:#1686df;padding:10px 15px;
+ border-radius:7px;font-size:11px;
 }
-.hero-small:nth-child(2){
- background:linear-gradient(130deg,#166d9e,#112a42);
+.hero-side{display:grid;gap:15px}
+.side-card{
+ min-height:167px;border-radius:14px;
+ color:white;display:flex;align-items:end;
+ padding:19px;
+ background:
+ linear-gradient(0deg,#071321eF,transparent),
+ url("https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800") center/cover;
 }
-.hero-small h3{font-size:15px;line-height:1.8;margin:9px 0 0}
+.side-card:nth-child(2){
+ background:
+ linear-gradient(0deg,#071321ed,transparent),
+ url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=800") center/cover;
+}
+.side-card h3{font-size:14px;line-height:1.9;margin:9px 0 0}
 
 /* SECTION */
-.section{margin-top:34px}
-.section-title{
+.section{margin-top:35px}
+.section-head{
  display:flex;align-items:center;
- justify-content:space-between;
- margin-bottom:17px;
+ justify-content:space-between;margin-bottom:17px;
 }
-.section-title h2{
+.section-head h2{
  font-size:18px;margin:0;
  border-right:4px solid var(--blue);
- padding-right:11px;
+ padding-right:12px;
 }
-.section-title a{font-size:11px;color:var(--blue)}
+.section-head a{font-size:11px;color:#167dca}
 
-/* NEWS CARDS */
+/* NEWS */
 .news-grid{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:16px;
+ display:grid;grid-template-columns:repeat(3,1fr);gap:17px;
 }
 .news-card{
- background:white;border:1px solid #e5ebf2;
- border-radius:14px;overflow:hidden;
+ background:white;border:1px solid #e4eaf0;
+ border-radius:12px;overflow:hidden;
  transition:.2s;
 }
 .news-card:hover{
  transform:translateY(-4px);
- box-shadow:0 10px 25px #173b5b12;
+ box-shadow:0 9px 25px #17334d15;
 }
-.news-image{
- height:165px;
- display:grid;place-items:center;
- font-size:48px;color:white;
- background:linear-gradient(135deg,#1b6595,#0c2036);
+.news-img{height:180px;overflow:hidden;background:#dce8f4}
+.news-img img{
+ width:100%;height:100%;object-fit:cover;
+ transition:.3s;
 }
-.news-card:nth-child(3n+2) .news-image{
- background:linear-gradient(135deg,#275e78,#142a43)
+.news-card:hover .news-img img{transform:scale(1.04)}
+.news-info{padding:15px}
+.news-cat{font-size:10px;color:#1686df;font-weight:bold}
+.news-info h3{
+ font-size:14px;line-height:1.9;margin:10px 0;
 }
-.news-card:nth-child(3n) .news-image{
- background:linear-gradient(135deg,#246b91,#101d32)
+.news-info p{
+ font-size:11px;line-height:2;color:var(--muted);
+ margin:0 0 14px;
 }
-.news-body{padding:15px}
-.news-category{font-size:10px;color:var(--blue)}
-.news-body h3{
- font-size:14px;line-height:2;
- margin:9px 0;color:#152c45;
+.news-meta{
+ border-top:1px solid #edf1f5;
+ padding-top:11px;color:#9aa8b7;
+ font-size:10px;
 }
-.news-body p{
- font-size:11px;line-height:2;
- color:var(--muted);margin:0 0 12px;
+.empty{
+ display:none;padding:25px;text-align:center;
+ color:var(--muted);font-size:13px;
 }
-.news-time{font-size:10px;color:#98a6b6}
 
 /* CATEGORIES */
-.category-grid{
- display:grid;
- grid-template-columns:repeat(5,1fr);
- gap:12px;
+.categories{
+ display:grid;grid-template-columns:repeat(5,1fr);gap:12px;
 }
 .category{
- background:white;border:1px solid #e4ebf3;
- padding:18px 8px;border-radius:12px;
- text-align:center;font-size:12px;
+ background:white;border:1px solid #e3eaf1;
+ border-radius:11px;padding:17px 8px;
+ text-align:center;font-size:11px;
  transition:.2s;
 }
 .category:hover{
  border-color:var(--blue);
  background:#eaf5ff;
+ color:#087acb;
 }
 .category span{display:block;font-size:25px;margin-bottom:10px}
 
-/* NEWSLETTER */
-.join{
- margin:38px 0;
+/* CHANNEL */
+.channel{
+ margin:40px 0;
+ background:linear-gradient(110deg,#0b1726,#164e7c);
+ color:white;border-radius:15px;
  padding:27px;
- border-radius:17px;
- color:white;
- background:linear-gradient(120deg,#0b1b2d,#15538a);
  display:flex;align-items:center;
  justify-content:space-between;gap:15px;
 }
-.join h2{font-size:19px;margin:0 0 9px}
-.join p{font-size:11px;color:#c5d9ed;line-height:2}
-.join a{
- background:#1688dc;color:white;
- padding:12px 17px;border-radius:9px;
- font-size:12px;white-space:nowrap;
+.channel h2{font-size:18px;margin:0 0 10px}
+.channel p{font-size:11px;color:#c5d8ea;line-height:2}
+.channel a{
+ background:#1686df;padding:12px 17px;
+ border-radius:8px;font-size:12px;white-space:nowrap;
 }
 
 /* FOOTER */
-footer{
- background:#091522;color:#dce9f7;
- padding:30px 0 18px;
-}
+footer{background:#091522;color:white;padding:35px 0 17px}
 .footer-grid{
- display:grid;grid-template-columns:2fr 1fr 1fr;
- gap:25px;
+ display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px;
 }
-footer h3{font-size:15px;color:#54aef5}
+footer h3{font-size:14px;color:#55b2ff}
 footer p,footer a{
- font-size:11px;color:#a9bdd1;line-height:2.3;
+ font-size:11px;color:#afc0d2;line-height:2.4;
 }
 .footer-links{display:flex;flex-direction:column}
 .copyright{
- border-top:1px solid #ffffff19;
+ border-top:1px solid #ffffff1b;
  text-align:center;padding-top:17px;
- margin-top:25px;color:#7890a9;font-size:10px;
+ margin-top:25px;color:#8094a8;font-size:10px;
 }
 
-/* SEARCH */
-.search-box{margin-top:22px}
-.search-box input{
- width:100%;padding:15px 17px;
- border:1px solid #dce5ef;border-radius:11px;
- outline:none;background:white;font-size:12px;
-}
-.search-box input:focus{border-color:var(--blue)}
-.empty{
- display:none;text-align:center;
- padding:25px;color:var(--muted);font-size:13px;
-}
+/* MOBILE */
 @media(max-width:700px){
- .header-content{flex-wrap:wrap}
- .header-links{display:none}
- .menu-button{display:block}
+ .topbar .container{font-size:9px}
+ .header{flex-wrap:wrap}
+ .brand h1{font-size:17px}
+ .logo{width:47px;height:47px}
+ .header-actions{display:none}
+ .menu-btn{display:block}
  nav{display:none}
  nav.open{display:block}
- .nav-content{flex-direction:column;align-items:stretch;gap:0}
- .nav-content a{padding:12px 4px;border-bottom:1px solid #ffffff12}
+ .nav{display:flex;flex-direction:column;align-items:stretch;gap:0}
+ .nav a{padding:13px 4px;border-bottom:1px solid #ffffff16}
  .hero{grid-template-columns:1fr}
- .hero-main{min-height:250px}
+ .hero-main{min-height:300px}
+ .hero h2{font-size:21px}
  .hero-side{grid-template-columns:1fr 1fr}
- .hero-small{min-height:130px;padding:13px}
- .hero-small h3{font-size:12px}
+ .side-card{min-height:140px;padding:13px}
+ .side-card h3{font-size:12px}
  .news-grid{grid-template-columns:1fr 1fr;gap:10px}
- .news-image{height:120px}
- .news-body{padding:11px}
- .news-body h3{font-size:12px}
- .news-body p{font-size:10px}
- .category-grid{grid-template-columns:repeat(3,1fr);gap:8px}
- .category{font-size:10px;padding:14px 5px}
- .join{flex-direction:column;align-items:flex-start}
+ .news-img{height:125px}
+ .news-info{padding:10px}
+ .news-info h3{font-size:12px}
+ .news-info p{font-size:10px}
+ .categories{grid-template-columns:repeat(3,1fr);gap:8px}
+ .category{font-size:10px;padding:13px 4px}
+ .channel{flex-direction:column;align-items:flex-start}
  .footer-grid{grid-template-columns:1fr 1fr}
  .footer-grid>div:first-child{grid-column:1/-1}
 }
@@ -283,8 +292,15 @@ footer p,footer a{
 
 <body>
 
+<div class="topbar">
+ <div class="container">
+  <span>🌍 رسانه خبری رویدادهای جهان</span>
+  <span>WORLD EVENTS | اخبار جهان</span>
+ </div>
+</div>
+
 <header>
- <div class="container header-content">
+ <div class="container header">
   <div class="brand">
    <div class="logo">🌍</div>
    <div>
@@ -292,17 +308,16 @@ footer p,footer a{
     <p>رویدادهای جهان | از جهان باخبر باشید</p>
    </div>
   </div>
-  <div class="header-links">
+  <div class="header-actions">
    <a href="https://ble.ir/WORLDEVENTS">کانال رسمی</a>
    <a href="https://ble.ir/WORLDEVENTSCHAT">گروه گفت‌وگو</a>
-   <a href="#about">درباره ما</a>
   </div>
-  <button class="menu-button" onclick="toggleMenu()">☰</button>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
  </div>
 </header>
 
-<nav id="navigation">
- <div class="container nav-content">
+<nav id="nav">
+ <div class="container nav">
   <a href="#">صفحه اصلی</a>
   <a href="#latest">آخرین اخبار</a>
   <a href="#categories">اخبار جهان</a>
@@ -319,117 +334,131 @@ footer p,footer a{
 
  <div class="breaking">
   <div class="breaking-label">⚡ اخبار فوری</div>
-  <div class="breaking-text" id="breakingText">
-   به بخش اخبار فوری WORLD EVENTS خوش آمدید.
+  <div class="breaking-content" id="breakingText">
+   آخرین رویدادهای مهم جهان را در WORLD EVENTS دنبال کنید.
   </div>
  </div>
 
- <div class="search-box">
-  <input id="search" type="search"
-   placeholder="🔍 جست‌وجو در میان اخبار..."
-   oninput="searchNews()">
+ <div class="search">
+  <input id="search" placeholder="🔍 جست‌وجو در اخبار..." oninput="searchNews()">
+  <button onclick="searchNews()">جست‌وجو</button>
  </div>
 
  <section class="hero">
   <div class="hero-main">
-   <div>
+   <div class="hero-content">
     <span class="tag">رسانه خبری WORLD EVENTS</span>
     <h2>پنجره‌ای به تازه‌ترین رویدادهای جهان</h2>
-    <p>
-     تازه‌ترین اخبار، تحولات بین‌المللی و رویدادهای مهم
-     را در WORLD EVENTS دنبال کنید.
-    </p>
+    <p>تازه‌ترین اخبار، تحولات بین‌المللی و رویدادهای مهم جهان را دنبال کنید.</p>
+    <a class="read" href="#latest">مشاهده آخرین اخبار ←</a>
    </div>
   </div>
+
   <div class="hero-side">
-   <div class="hero-small">
-    <span class="tag">اخبار جهان</span>
-    <h3>تحولات و رویدادهای بین‌المللی</h3>
+   <div class="side-card">
+    <div>
+     <span class="tag">اخبار جهان</span>
+     <h3>تحولات و رویدادهای بین‌المللی</h3>
+    </div>
    </div>
-   <div class="hero-small">
-    <span class="tag">فناوری</span>
-    <h3>نگاهی به دنیای علم و فناوری</h3>
+   <div class="side-card">
+    <div>
+     <span class="tag">فناوری</span>
+     <h3>نگاهی به دنیای علم و فناوری</h3>
+    </div>
    </div>
   </div>
  </section>
 
  <section class="section" id="latest">
-  <div class="section-title">
+  <div class="section-head">
    <h2>آخرین اخبار</h2>
    <a href="#latest">مشاهده همه ←</a>
   </div>
 
   <div class="news-grid" id="newsGrid">
 
-   <article class="news-card" data-category="جهان">
-    <div class="news-image">🌍</div>
-    <div class="news-body">
-     <span class="news-category">اخبار جهان</span>
-     <h3>رویدادهای مهم جهان را دنبال کنید</h3>
-     <p>آخرین تحولات بین‌المللی و اتفاقات مهم جهان در این بخش منتشر می‌شود.</p>
-     <span class="news-time">WORLD EVENTS</span>
+   <article class="news-card">
+    <div class="news-img">
+     <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=700" alt="اخبار جهان">
+    </div>
+    <div class="news-info">
+     <span class="news-cat">اخبار جهان</span>
+     <h3>تحولات و رویدادهای بین‌المللی</h3>
+     <p>آخرین اتفاقات و تحولات مهم جهان را در این بخش دنبال کنید.</p>
+     <div class="news-meta">WORLD EVENTS</div>
     </div>
    </article>
 
-   <article class="news-card" data-category="فناوری">
-    <div class="news-image">💻</div>
-    <div class="news-body">
-     <span class="news-category">فناوری</span>
-     <h3>تازه‌های دنیای فناوری و تکنولوژی</h3>
-     <p>با جدیدترین دستاوردهای فناوری و نوآوری‌های علمی آشنا شوید.</p>
-     <span class="news-time">WORLD EVENTS</span>
+   <article class="news-card">
+    <div class="news-img">
+     <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700" alt="اقتصاد">
+    </div>
+    <div class="news-info">
+     <span class="news-cat">اقتصاد</span>
+     <h3>تحولات اقتصادی و بازارهای جهانی</h3>
+     <p>گزارش‌ها و رویدادهای مهم اقتصادی را دنبال کنید.</p>
+     <div class="news-meta">WORLD EVENTS</div>
     </div>
    </article>
 
-   <article class="news-card" data-category="اقتصاد">
-    <div class="news-image">📊</div>
-    <div class="news-body">
-     <span class="news-category">اقتصاد</span>
-     <h3>نگاهی به تحولات اقتصادی جهان</h3>
-     <p>گزارش‌ها و تحلیل‌های اقتصادی در این بخش قرار می‌گیرند.</p>
-     <span class="news-time">WORLD EVENTS</span>
+   <article class="news-card">
+    <div class="news-img">
+     <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700" alt="فناوری">
+    </div>
+    <div class="news-info">
+     <span class="news-cat">فناوری</span>
+     <h3>تازه‌های دنیای فناوری</h3>
+     <p>با فناوری‌های جدید و نوآوری‌های علمی آشنا شوید.</p>
+     <div class="news-meta">WORLD EVENTS</div>
     </div>
    </article>
 
-   <article class="news-card" data-category="علم">
-    <div class="news-image">🔬</div>
-    <div class="news-body">
-     <span class="news-category">علم و دانش</span>
-     <h3>تازه‌ترین اخبار علمی</h3>
-     <p>دستاوردهای علمی و پژوهش‌های جدید را دنبال کنید.</p>
-     <span class="news-time">WORLD EVENTS</span>
+   <article class="news-card">
+    <div class="news-img">
+     <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=700" alt="علم">
+    </div>
+    <div class="news-info">
+     <span class="news-cat">علم و دانش</span>
+     <h3>دستاوردهای علمی و پژوهشی</h3>
+     <p>تازه‌ترین اخبار علمی و پژوهش‌های جدید جهان.</p>
+     <div class="news-meta">WORLD EVENTS</div>
     </div>
    </article>
 
-   <article class="news-card" data-category="ورزش">
-    <div class="news-image">⚽</div>
-    <div class="news-body">
-     <span class="news-category">ورزش</span>
-     <h3>آخرین رویدادهای ورزشی</h3>
-     <p>خبرها و اتفاقات دنیای ورزش در این قسمت منتشر می‌شوند.</p>
-     <span class="news-time">WORLD EVENTS</span>
+   <article class="news-card">
+    <div class="news-img">
+     <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=700" alt="ورزش">
+    </div>
+    <div class="news-info">
+     <span class="news-cat">ورزش</span>
+     <h3>رویدادهای مهم ورزشی</h3>
+     <p>خبرها و اتفاقات دنیای ورزش را دنبال کنید.</p>
+     <div class="news-meta">WORLD EVENTS</div>
     </div>
    </article>
 
-   <article class="news-card" data-category="سیاست">
-    <div class="news-image">🏛️</div>
-    <div class="news-body">
-     <span class="news-category">سیاست و دیپلماسی</span>
-     <h3>تحولات سیاسی و روابط بین‌الملل</h3>
-     <p>رویدادهای سیاسی و دیپلماتیک جهان را دنبال کنید.</p>
-     <span class="news-time">WORLD EVENTS</span>
+   <article class="news-card">
+    <div class="news-img">
+     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700" alt="سیاست">
+    </div>
+    <div class="news-info">
+     <span class="news-cat">سیاست و دیپلماسی</span>
+     <h3>روابط بین‌الملل و تحولات سیاسی</h3>
+     <p>گزارش رویدادهای سیاسی و دیپلماتیک جهان.</p>
+     <div class="news-meta">WORLD EVENTS</div>
     </div>
    </article>
 
   </div>
-  <div class="empty" id="empty">خبری با این عبارت پیدا نشد.</div>
+  <div class="empty" id="empty">خبری پیدا نشد.</div>
  </section>
 
  <section class="section" id="categories">
-  <div class="section-title">
+  <div class="section-head">
    <h2>دسته‌بندی اخبار</h2>
   </div>
-  <div class="category-grid">
+  <div class="categories">
    <a class="category" href="#latest"><span>🌍</span>اخبار جهان</a>
    <a class="category" href="#latest"><span>📊</span>اقتصاد</a>
    <a class="category" href="#latest"><span>🔬</span>علم و دانش</a>
@@ -443,12 +472,12 @@ footer p,footer a{
   </div>
  </section>
 
- <section class="join">
+ <section class="channel">
   <div>
    <h2>همراه WORLD EVENTS باشید</h2>
    <p>برای دنبال‌کردن تازه‌ترین اخبار به کانال رسمی ما بپیوندید.</p>
   </div>
-  <a href="https://ble.ir/WORLDEVENTS">📢 ورود به کانال رسمی</a>
+  <a href="https://ble.ir/WORLDEVENTS">📢 عضویت در کانال رسمی</a>
  </section>
 
 </main>
@@ -458,10 +487,7 @@ footer p,footer a{
   <div class="footer-grid">
    <div>
     <h3>🌍 WORLD EVENTS</h3>
-    <p>
-     رویدادهای جهان؛ پنجره‌ای به تازه‌ترین اخبار،
-     تحولات بین‌المللی و اتفاقات مهم جهان.
-    </p>
+    <p>رویدادهای جهان؛ پنجره‌ای به تازه‌ترین اخبار و تحولات بین‌المللی.</p>
    </div>
    <div>
     <h3>دسترسی سریع</h3>
@@ -488,22 +514,22 @@ footer p,footer a{
 
 <script>
 function toggleMenu(){
- document.getElementById('navigation').classList.toggle('open');
+ document.getElementById('nav').classList.toggle('open');
 }
 
 function searchNews(){
- const q=document.getElementById('search').value.trim().toLowerCase();
+ const query=document.getElementById('search').value.trim().toLowerCase();
  const cards=document.querySelectorAll('.news-card');
- let count=0;
+ let found=0;
 
  cards.forEach(card=>{
-  const match=card.innerText.toLowerCase().includes(q);
+  const match=card.innerText.toLowerCase().includes(query);
   card.style.display=match?'':'none';
-  if(match)count++;
+  if(match)found++;
  });
 
  document.getElementById('empty').style.display=
-  count===0?'block':'none';
+  found===0?'block':'none';
 }
 </script>
 
